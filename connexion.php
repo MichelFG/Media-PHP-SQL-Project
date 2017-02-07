@@ -1,18 +1,11 @@
 <?php
 
-require_once('./write_html.class.php');
-require_once('./functions.php');
+require_once('./make_html.class.php');
+require_once('./functions.class.php');
 
-html_start("Page d'accueil",'./style.css');
+MakeHTML::html_start("Connexion");
 
-echo '<div class="CNX">Connexion';
-inputGen('text', 'Name','Nom','Votre nom','');
-inputGen('password','pswd','password','Votre mot de passe','');
-echo '<input class="subbuton" type="submit" name="Connexion" value="Connexion"/>'."\n";
-echo '</div>';
-echo '<div class="INS">Inscription';
-inputGen('text','Name','Nom','Votre nom','');
-inputGen('password','pswd','password','Votre mot de passe','');
-echo '<input class="subbuton" type="submit" name="Inscription" value="Inscription"/>'."\n";
-echo '</div>';
-html_end();
+Form_GEN::formuGen();
+Form_GEN::formuGen();
+
+MakeHTML::html_end();

@@ -1,5 +1,5 @@
  body {
-     background-image: url("./wpperf.png");
+     background-image: url("./img/wpperf.png");
      background-size: contain;
      background-position: center;
      background-repeat: no-repeat;
@@ -9,9 +9,15 @@
      text-decoration: none;
  }
  
+ .header {
+     width: 80%;
+     height: 8em;
+     background-color: lightblue;
+ }
+ 
  .Lien_cnx {
      padding-top: 2%;
-     padding-left: 70%;
+     padding-left: 90%;
  }
  
  .CNX {
