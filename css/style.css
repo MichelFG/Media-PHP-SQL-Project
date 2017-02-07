@@ -4,3 +4,20 @@
      background-position: center;
      background-repeat: no-repeat;
  }
+ 
+ .Lien_cnx {
+     padding-top: 2%;
+     padding-left: 70%;
+ }
+ 
+ .CNX {
+     position: absolute;
+     padding-top: 15%;
+     padding-left: 30%;
+ }
+ 
+ .INS {
+     position: absolute;
+     padding-top: 22%;
+     padding-left: 30%;
+ }
