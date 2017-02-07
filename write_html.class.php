@@ -1,6 +1,7 @@
 <?php
 
-function html_start(string $title, string $cssfile='') {
+
+    function html_start(string $title, string $cssfile='') {
     echo "<!DOCTYPE html>\n
         <html>\n<head>\n";
     echo "<title> $title </title>\n";
