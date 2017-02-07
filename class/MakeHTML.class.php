@@ -1,6 +1,6 @@
 <?php
 
-abstract class MakeHTML {
+class MakeHTML {
     
     static function html_start(string $title) {
     echo '<!DOCTYPE html>

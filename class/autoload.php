@@ -1,5 +1,7 @@
-<?
+<?Php
 	 function __autoload($class)
 		{
-			 require_once 'class/'.$class.'.class.php';
+			 $nom=$class.'.class.php';
+			 require_once $nom;
 		}
+	 
