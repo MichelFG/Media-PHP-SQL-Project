@@ -1,17 +1,13 @@
-body {
+html {
     background-image: url("../img/wpperf.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 10%;
+    margin-top: 2%;
 }
 
 a {
     text-decoration: none;
-}
-
-input {
-    height: 2em;
-    width: 200%;
-    border-radius: 9px;
+    color: white;
 }
 
 .Lien_cnx,
@@ -56,12 +52,6 @@ input {
     background-color: #474747;
 }
 
-.Lien_cnx:active,
-.subbutton:active {
-    position: relative;
-    top: 1px;
-}
-
 .header {
     border: 3px solid black;
     border-radius: 5px;
@@ -77,10 +67,26 @@ textarea {
     resize: none;
 }
 
+.pswd {
+    height: 2em;
+    width: 30%;
+    border-radius: 7px;
+}
+
 .Form {
-    position: absolute;
-    padding-top: 17%;
-    padding-left: 30%;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 20%;
+    padding-left: 10%;
+    padding-bottom: 8%;
+    padding-top: 2%;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-image: url("../img/metal2.png");
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
 }
 
 .logo1 {
@@ -100,6 +106,7 @@ textarea {
     border: 3px solid black;
     border-radius: 5px;
     background-image: url("../img/metal2.png");
+    background-attachment: fixed;
     background-size: contain;
     background-position: center;
     background-repeat: repeat;

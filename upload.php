@@ -10,14 +10,14 @@ MakeHTML::html_start("Connexion");
 
             <div class="upload_form">
                 <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-                <input type="file" name="files[]" id="file" multiple="multiple" title="Message d'erreur" />
+                <input type="file" name="files" id="file" multiple="multiple" title="Message d'erreur" />
                 <div class="txtarea">
                     Description du fichier :
                     <br>
                     <textarea cols="30" rows="4" name="txtarea"></textarea>
                 </div>
             </div>
-            <input type="submit" name="submit" value="Envoyer" />
+            <input type="submit" class="Lien_cnx" name="submit" value="Envoyer" />
 
         </form>
     </div>
