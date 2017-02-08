@@ -2,7 +2,7 @@
 
 class MakeHTML {
     
-    static function html_start(string $title) {
+    static function html_start($title) {
     echo '<!DOCTYPE html>
         <html><head>'."\n";
         

@@ -1,5 +1,5 @@
  body {
-     background-image: url("./img/wpperf.png");
+     background-image: url("../img/wpperf.png");
      background-size: contain;
      background-position: center;
      background-repeat: no-repeat;
@@ -10,11 +10,14 @@
  }
  
  .header {
-     border: 1px solid black;
+     border: 3px solid black;
      border-radius: 5px;
      width: 80%;
      height: 8em;
-     background-color: lightblue;
+     background-image: url("../img/metal.png");
+     background-size: contain;
+     background-position: center;
+     background-repeat: repeat;
  }
  
  .Lien_cnx {
