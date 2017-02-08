@@ -1,47 +1,106 @@
- body {
-     background-image: url("../img/wpperf.png");
-     background-position: center;
-     background-repeat: no-repeat;
- }
- 
- a {
-     text-decoration: none;
- }
- 
- .header {
-     border: 3px solid black;
-     border-radius: 5px;
-     width: 80%;
-     height: 8em;
-     background-image: url("../img/metal.png");
-     background-size: contain;
-     background-position: center;
-     background-repeat: repeat;
- }
- 
- textarea {
-     resize: none;
- }
- 
- .Lien_cnx {
-     padding-top: 2%;
-     padding-left: 90%;
- }
- 
- .Form {
-     position: absolute;
-     padding-top: 17%;
-     padding-left: 30%;
- }
- 
- .logo1 {
-     width: 10em;
- }
- 
- .logo2 {
-     width: 15em;
- }
- 
- .form_upload {
-     padding-left: 10%;
- }
+body {
+    background-image: url("../img/wpperf.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    height: 2em;
+    width: 200%;
+    border-radius: 9px;
+}
+
+.Lien_cnx,
+.subbutton {
+    height: 1.3em;
+    -moz-box-shadow: 4px 3px 7px -2px #808080;
+    -webkit-box-shadow: 4px 3px 7px -2px #808080;
+    box-shadow: 4px 3px 7px -2px #808080;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbdbdb), color-stop(1, #474747));
+    background: -moz-linear-gradient(top, #dbdbdb 5%, #474747 100%);
+    background: -webkit-linear-gradient(top, #dbdbdb 5%, #474747 100%);
+    background: -o-linear-gradient(top, #dbdbdb 5%, #474747 100%);
+    background: -ms-linear-gradient(top, #dbdbdb 5%, #474747 100%);
+    background: linear-gradient(to bottom, #dbdbdb 5%, #474747 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#474747', GradientType=0);
+    background-color: #dbdbdb;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 170%;
+}
+
+.Lien_cnx {
+    display: flex;
+    position: absolute;
+    align-content: right;
+}
+
+.Lien_cnx:hover,
+.subbutton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #474747), color-stop(1, #dbdbdb));
+    background: -moz-linear-gradient(top, #474747 5%, #dbdbdb 100%);
+    background: -webkit-linear-gradient(top, #474747 5%, #dbdbdb 100%);
+    background: -o-linear-gradient(top, #474747 5%, #dbdbdb 100%);
+    background: -ms-linear-gradient(top, #474747 5%, #dbdbdb 100%);
+    background: linear-gradient(to bottom, #474747 5%, #dbdbdb 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#dbdbdb', GradientType=0);
+    background-color: #474747;
+}
+
+.Lien_cnx:active,
+.subbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+.header {
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 8em;
+    background-image: url("../img/metal.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+textarea {
+    resize: none;
+}
+
+.Form {
+    position: absolute;
+    padding-top: 17%;
+    padding-left: 30%;
+}
+
+.logo1 {
+    width: 10em;
+}
+
+.logo2 {
+    width: 15em;
+}
+
+.form_upload {
+    margin-top: 5%;
+    margin-left: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    width: 60%;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-image: url("../img/metal2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+}
