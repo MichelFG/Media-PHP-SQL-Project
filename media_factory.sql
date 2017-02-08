@@ -34,7 +34,7 @@ CREATE TABLE `datas` (
   `nom_du_fichier` varchar(30) NOT NULL,
   `chemin_relatif` varchar(30) NOT NULL,
   `mime_type` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ CREATE TABLE `user` (
   `id_auto` int(11) NOT NULL,
   `pseudo` varchar(30) NOT NULL,
   `mdp` varchar(12) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Index pour les tables exportées
