@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 07 Février 2017 à 16:31
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
+-- Généré le :  Mer 08 Février 2017 à 11:10
+-- Version du serveur :  10.1.19-MariaDB
+-- Version de PHP :  7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `media_factory`
+-- Base de données :  `projet_poo`
 --
 
 -- --------------------------------------------------------
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `datas` (
   `id_auto` int(11) NOT NULL,
-  `auteur_id` int(30) NOT NULL,
-  `date` date NOT NULL,
+  `id_auteur` int(30) NOT NULL,
+  `date` datetime NOT NULL,
   `description` varchar(50) DEFAULT NULL,
   `nom_du_fichier` varchar(30) NOT NULL,
   `chemin_relatif` varchar(30) NOT NULL,
@@ -39,13 +39,13 @@ CREATE TABLE `datas` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Structure de la table `users`
 --
 
-CREATE TABLE `user` (
-  `id_auto` int(11) NOT NULL,
+CREATE TABLE `users` (
+  `id_auteur` int(11) NOT NULL,
   `pseudo` varchar(30) NOT NULL,
-  `mdp` varchar(12) NOT NULL
+  `mdp` varchar(38) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -59,10 +59,10 @@ ALTER TABLE `datas`
   ADD PRIMARY KEY (`id_auto`);
 
 --
--- Index pour la table `user`
+-- Index pour la table `users`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_auto`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_auteur`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -74,10 +74,10 @@ ALTER TABLE `user`
 ALTER TABLE `datas`
   MODIFY `id_auto` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `user`
+-- AUTO_INCREMENT pour la table `users`
 --
-ALTER TABLE `user`
-  MODIFY `id_auto` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+  MODIFY `id_auteur` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
