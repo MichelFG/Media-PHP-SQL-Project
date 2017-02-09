@@ -1,5 +1,5 @@
 html {
-    background-image: url("../img/wpperf.png");
+    background-image: url("../img/wpper1.png");
     background-attachment: fixed;
     margin: 10%;
     margin-top: 2%;
@@ -107,7 +107,44 @@ textarea {
     border-radius: 5px;
     background-image: url("../img/metal2.png");
     background-attachment: fixed;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
     background-repeat: repeat;
+}
+
+@media screen and (max-width: 45em) {
+    html {
+        margin: 0;
+        padding: 0;
+        background-image: url("../img/wpper1.png");
+        background-attachment: fixed;
+        background: no-repeat;
+    }
+    .header {
+        width: 100%;
+    }
+    .form_upload {
+        width: 90%;
+        margin: 0;
+        margin-top: 5%;
+        padding: 5%;
+        padding-top: 2%;
+        padding-bottom: 20%;
+    }
+    .Form {
+        width: 90%;
+        margin: 0;
+        margin-top: 5%;
+        padding: 5%;
+        padding-top: 2%;
+        padding-bottom: 20%;
+    }
+    textarea {
+        resize: inherit;
+    }
+    .pswd {
+        height: 2em;
+        width: 100%;
+        border-radius: 7px;
+    }
 }
