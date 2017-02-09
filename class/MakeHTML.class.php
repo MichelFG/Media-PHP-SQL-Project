@@ -15,11 +15,11 @@ class MakeHTML {
         
          
         echo '</head><body>'."\n";
-         echo '<div class="header">'."\n";
-        echo '<img src="./img/media.png" alt="Media" class="logo1">';
-        echo '<img src="./img/factory.png" alt="Factory" class="logo2">';
-       echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div>';
-         echo '</div>';
+        echo '<div class="header">'."\n";
+        echo '<a href="index.php"><img src="./img/media.png" alt="Media" class="logo1"></a>';
+        echo '<a href="index.php"><img src="./img/factory.png" alt="Factory" class="logo2"></a>';
+        echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div>';
+        echo '</div>';
     }
 
     static function html_end(){
