@@ -4,6 +4,31 @@ body {
 }
 
 
+input {
+    margin-top: 0.3em;
+}
+
+
+#conteneur {
+    padding-top: 1em;
+}
+
+
+#logo{ 
+    float:left;
+}
+
+#logo + .Lien_cnx {
+    float: right;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+}
+
+
+.header+ div {
+     clear: both;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -31,13 +56,11 @@ a {
     color: #ffffff;
     font-family: Arial;
     font-size: 170%;
-    float: right;
+    width: 210px;
+    text-align: center;
 }
 
-.Lien_cnx {
-    display: flex;
-    position: absolute;
-}
+
 
 .Lien_cnx:hover,
 .subbutton:hover {
@@ -57,6 +80,7 @@ a {
     width: 80%;
     height: 8em;
     margin: auto;
+    margin-top 5em;
     background-image: url("../img/metal.png");
     background-size: contain;
     background-position: center;
@@ -83,7 +107,7 @@ textarea {
     border: 3px solid black;
     border-radius: 5px;
     background-image: url("../img/metal.png");
-   /* background-attachment: fixed;*/
+   background-attachment: fixed;
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
@@ -91,11 +115,16 @@ textarea {
 
 .logo1 {
     width: 15em;
+    max-width: 100%;
+   
 }
 
 .logo2 {
     width: 23em;
+    max-width: 100%;
+    
 }
+
 
 .form_upload {
     margin-top: 5%;
@@ -149,14 +178,12 @@ textarea {
         margin-right: auto;  
         min-height: 508px;
     }
-    
-   
 }
     
 
 /* SMARTPHONE*/
-/*320px  */
-@media screen and (min-width: 20em) and (max-width: 47em) 
+/*jusqu'à 762 */
+@media screen and (max-width: 47em) 
 
 {
     #conteneur {
