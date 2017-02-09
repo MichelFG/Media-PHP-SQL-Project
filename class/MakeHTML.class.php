@@ -11,10 +11,11 @@ class MakeHTML {
        
     echo '<meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0\">'."\n";
-    echo '<link rel="stylesheet" href="./css/style.css">'."\n";
+    echo '<link rel="stylesheet" href="css/style.css">'."\n";
+	echo '<link rel="stylesheet" href="jquery.bxslider/jquery.bxslider.css" type="text/css" />';
         
          
-        echo '</head><body><div id="conteneur">'."\n";
+        echo '</head><body>'."\n";
         echo '<div class="header">'."\n";
         echo '<a href="index.php"><img src="./img/media.png" alt="Media" class="logo1"></a>';
         echo '<a href="index.php"><img src="./img/factory.png" alt="Factory" class="logo2"></a>';
@@ -23,6 +24,6 @@ class MakeHTML {
     }
 
     static function html_end(){
-    echo '</div></body></html>';
+    echo '</body></html>';
     }
 }
