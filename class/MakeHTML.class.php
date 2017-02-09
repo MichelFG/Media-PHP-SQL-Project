@@ -15,15 +15,15 @@ class MakeHTML {
 	echo '<link rel="stylesheet" href="jquery.bxslider/jquery.bxslider.css" type="text/css" />';
         
          
-        echo '</head><body>'."\n";
+        echo "</head><body><div id='conteneur'>"."\n";
         echo '<div class="header">'."\n";
-        echo '<a href="index.php"><img src="./img/media.png" alt="Media" class="logo1"></a>';
-        echo '<a href="index.php"><img src="./img/factory.png" alt="Factory" class="logo2"></a>';
+        echo '<div id="logo"><a href="index.php"><img src="./img/media.png" alt="Media" class="logo1"></a>';
+        echo '<a href="index.php"><img src="./img/factory.png" alt="Factory" class="logo2"></a></div>';
         echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div>';
         echo '</div>';
     }
 
     static function html_end(){
-    echo '</body></html>';
+    echo '</div></body></html>';
     }
 }

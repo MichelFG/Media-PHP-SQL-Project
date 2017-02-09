@@ -1,8 +1,32 @@
-html {
-    background-image: url("../img/wpperf.png");
-    background-attachment: fixed;
-    margin: 10%;
-    margin-top: 2%;
+
+body {
+    background-image: url("../img/metal2.png");
+}
+
+
+input {
+    margin-top: 0.3em;
+}
+
+
+#conteneur {
+    padding-top: 1em;
+}
+
+
+#logo{ 
+    float:left;
+}
+
+#logo + .Lien_cnx {
+    float: right;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+}
+
+
+.header+ div {
+     clear: both;
 }
 
 a {
@@ -32,12 +56,11 @@ a {
     color: #ffffff;
     font-family: Arial;
     font-size: 170%;
+    width: 210px;
+    text-align: center;
 }
 
-.Lien_cnx {
-    display: flex;
-    position: absolute;
-}
+
 
 .Lien_cnx:hover,
 .subbutton:hover {
@@ -56,6 +79,8 @@ a {
     border-radius: 5px;
     width: 80%;
     height: 8em;
+    margin: auto;
+    margin-top 5em;
     background-image: url("../img/metal.png");
     background-size: contain;
     background-position: center;
@@ -82,7 +107,7 @@ textarea {
     border: 3px solid black;
     border-radius: 5px;
     background-image: url("../img/metal.png");
-    background-attachment: fixed;
+   background-attachment: fixed;
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
@@ -90,11 +115,16 @@ textarea {
 
 .logo1 {
     width: 15em;
+    max-width: 100%;
+   
 }
 
 .logo2 {
     width: 23em;
+    max-width: 100%;
+    
 }
+
 
 .form_upload {
     margin-top: 5%;
@@ -105,18 +135,60 @@ textarea {
     border: 3px solid black;
     border-radius: 5px;
     background-image: url("../img/metal.png");
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
 }
 
-@media screen and (max-width: 45em) {
-    html {
+
+
+
+/**************************************
+********MEDIA QUERIES ***************
+***********************************/
+
+
+/*Desktop*/
+/* 1280px*/
+@media screen and (min-width:80em) {
+    #conteneur { 
+    background-image: url("../img/wpperf.png");
+    background-repeat: no-repeat;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;  
+    min-height: 1280px;
+    } 
+    
+    
+    
+}
+
+
+/* TABLETTES */
+/*762px*/
+@media screen and (min-width: 47em) and (max-width: 80em) 
+{
+    #conteneur {
+        background-image: url("../img/wpperf.png");
+        background-repeat: no-repeat;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;  
+        min-height: 508px;
+    }
+}
+    
+
+/* SMARTPHONE*/
+/*jusqu'à 762 */
+@media screen and (max-width: 47em) 
+
+{
+    #conteneur {
         margin: 0;
         padding: 0;
-        background-image: url("../img/wpperf.png");
-        background-attachment: fixed;
     }
     .header {
         width: 100%;
