@@ -14,7 +14,7 @@ class MakeHTML {
     echo '<link rel="stylesheet" href="./css/style.css">'."\n";
         
          
-        echo '</head><body>'."\n";
+        echo '</head><body><div id="conteneur">'."\n";
         echo '<div class="header">'."\n";
         echo '<a href="index.php"><img src="./img/media.png" alt="Media" class="logo1"></a>';
         echo '<a href="index.php"><img src="./img/factory.png" alt="Factory" class="logo2"></a>';
@@ -23,6 +23,6 @@ class MakeHTML {
     }
 
     static function html_end(){
-    echo '</body></html>';
+    echo '</div></body></html>';
     }
 }
