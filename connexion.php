@@ -11,10 +11,6 @@ echo '<h2>Connectez vous</h2>';
 
 Form_GEN::formuGen();
 
-echo '<h2>Inscrivez vous</h2>';
-
-Form_GEN::formuGen();
-
-echo '</div>';
+ echo'<div class="Lien_cnx"><a href="inscription.php">Inscription</a></div>';
 
 MakeHTML::html_end();
