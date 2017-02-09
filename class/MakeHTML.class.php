@@ -8,18 +8,18 @@ class MakeHTML {
         
     echo '<title> $title </title>'."\n";
         
-        echo '<div class="header">'."\n";
-        echo '<img src="./img/media.png" alt="Media" class="logo1">';
-        echo '<img src="./img/factory.png" alt="Factory" class="logo2">';
-       echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div>';
-         echo '</div>';
+       
     echo '<meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0\">'."\n";
     echo '<link rel="stylesheet" href="./css/style.css">'."\n";
         
          
         echo '</head><body>'."\n";
-        
+         echo '<div class="header">'."\n";
+        echo '<img src="./img/media.png" alt="Media" class="logo1">';
+        echo '<img src="./img/factory.png" alt="Factory" class="logo2">';
+       echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div>';
+         echo '</div>';
     }
 
     static function html_end(){
