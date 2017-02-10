@@ -15,16 +15,13 @@ input {
     float: left;
 }
 
-#logo + .Lien_cnx,
-.Lien_ins {
+#logo + div
+{
     float: right;
     margin-top: 0.5em;
     margin-right: 0.5em;
 }
 
-.header+ div {
-    clear: both;
-}
 
 a {
     text-decoration: none;
@@ -54,8 +51,9 @@ a {
     font-family: Arial;
     font-size: 1.1em;
     text-align: center;
-    width: 129px;
+    width: 120px;
 }
+
 
 #input_text {
     position: absolute;
@@ -73,6 +71,12 @@ a {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.Lien_ins {
+    
+    margin-top: 10px;
+}
+
 
 .Lien_upld {
     width: 140px;
@@ -214,6 +218,12 @@ textarea {
     font-size: 2.5em;
 }
 
+/*SLIDER*/
+.sli {
+    cursor: pointer;
+}
+
+
 
 /**************************************
 ********MEDIA QUERIES ***************
@@ -221,13 +231,8 @@ textarea {
 
 
 /*Desktop*/
-
-
 /* 1280px*/
-
-
 /*@media screen and (min-width:80em) */
-
 @media screen and (min-width:1280px) {
     #conteneur {
         background-image: url("../img/wpperf.png");
@@ -245,13 +250,8 @@ textarea {
 
 
 /* TABLETTES */
-
-
 /*762px*/
-
-
 /*@media screen and (min-width: 47em) and (max-width: 80em) */
-
 @media screen and (min-width: 760px) and (max-width: 1280px) {
     #conteneur {
         background-image: url("../img/tablettewpperf.png");
@@ -278,7 +278,7 @@ textarea {
         font-size: 1.3em;
     }
     .header {
-        min-height: 4em;
+        min-height: 6.5em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
@@ -301,8 +301,6 @@ textarea {
 
 
 /* SMARTPHONE*/
-
-
 /*jusqu'à 762 */
 
 @media screen and (max-width: 760px) {
@@ -323,20 +321,35 @@ textarea {
         text-align: center;
         margin-bottom: 15px;
     }
-    #logo + .lien_cnx {
+    
+    #logo + div {
         float: none;
-        width: 144px;
+        width: 140px;
         margin: auto;
+        
+    }
+    
+    
+    
+   /* #logo + .lien_cnx {
+        
+        
         margin-top: 0.5em;
-        font-size: 1.5em;
-    }
+        font-size: 1.4em;
+    }*/
+    
     .Lien_ins {
-        float: left;
-        margin: 0;
+        float: none;
+        width: 140px;
+        margin: auto;
+        margin-top: 15px;
+        font-size: 1.4em;
     }
+    
+    
     .lien_cnx,
     .subbutton {
-        width: 144px;
+        width: 140px;
         margin: auto;
         margin-top: 0.5em;
         font-size: 1.3em;
