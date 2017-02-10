@@ -6,8 +6,6 @@
 	 $cnx=base::connect();
      printf( '<div>My name is %s</div>' , $data->pseudo );
 	 
-     echo'<div class="Lien_upld"><a href="upload.php">Charger un fichier</a></div>';
-	 
      Recherche::rechercheGen();
 
      echo '<div class="slide">';

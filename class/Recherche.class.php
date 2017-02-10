@@ -17,7 +17,9 @@ class recherche
         echo '<input type="text" class="rec" name="nom" placeholder="Titre">';
         echo '<br>';
         echo '<input type="submit" class ="subbutton" name="envoyer" value="Envoyer"/>'."\n";
+         echo'<div class="FILE-BTN"><a href="upload.php">Charger un fichier</a></div>';
         echo '</div>';
+    
       
     }
 }
