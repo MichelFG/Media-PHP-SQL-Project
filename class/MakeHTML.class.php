@@ -17,10 +17,12 @@ class MakeHTML {
          
         echo "</head><body><div id='conteneur'>"."\n";
         echo '<div class="header">'."\n";
-        echo '<div id="logo"><a href="index.php"><img src="./img/media.png" alt="Media" class="logo1"></a>';
-        echo '<a href="index.php"><img src="./img/factory.png" alt="Factory" class="logo2"></a></div>';
-        echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div>';
+        echo '<div id="logo"><a href="index.php"><img src="./img/media2.png" alt="Media" class="logo1"></a>';
+        echo '<a href="index.php"><img src="./img/factory2.png" alt="Factory" class="logo2"></a></div>';
+        echo'<div class="Lien_cnx"><a href="connexion.php">Connexion</a></div><br><br><br>';
+        echo'<div class="Lien_ins"><a href="inscription.php">Inscription</a></div><br>';
         echo '</div>';
+        
     }
 
     static function html_end(){
