@@ -8,6 +8,8 @@
 	 
      Recherche::rechercheGen();
 
+	 
+	 
      echo '<div class="slide">';
 		 echo '<div class="films">';
 
@@ -45,10 +47,13 @@
 		 echo '</div>';
      echo '</div>';
 	 
+	 echo '<p><a href="#overlay3">Afficher le masque</a></p>';
+
+	 
 	 // Popup Overlay
 	 echo '<div id="overlay3">';
 	 echo '<div class="popup_block">';
-	 echo '<a class="close" href="#noWhere"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="close_pop.png"></a>';
+	 echo '<a class="close" href="#noWhere"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="img/close_pop.png"></a>';
 	 echo '<img style="float: right; margin: 0 0 0 20px;" alt="Lil bomb dude" src="bomber.gif">';
 	 echo '<h2>Popup</h2>';
 	 echo '<p>Aliquip transverbero loquor esse ille vulputate exerci veniam fatua eros similis illum valde. Praesent, venio conventio rusticus antehabeo lenis. Melior pertineo feugait, praesent hos rusticus et haero facilisis abluo. </p>';
@@ -79,7 +84,7 @@
 				  slideWidth: 102,
 				  slideMargin: 0
 				});
-			 $(".sli img").click(function(){
+			 $("img.sli").click(function(){
 				 var id=$(this).attr("id");
 				 alert("On a clique sur "+id); 
 			 });
