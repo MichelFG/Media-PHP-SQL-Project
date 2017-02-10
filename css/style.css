@@ -15,7 +15,8 @@ input {
     float: left;
 }
 
-#logo + .Lien_cnx {
+#logo + .Lien_cnx,
+.Lien_ins {
     float: right;
     margin-top: 0.5em;
     margin-right: 0.5em;
@@ -30,6 +31,8 @@ a {
     color: white;
 }
 
+.Lien_upld,
+.Lien_ins,
 .Lien_cnx,
 .subbutton {
     -moz-box-shadow: 4px 3px 7px -2px #808080;
@@ -48,11 +51,16 @@ a {
     border-radius: 9px;
     border: 1px solid #000000;
     cursor: pointer;
-    color: #ffffff;
     font-family: Arial;
     font-size: 1.1em;
     text-align: center;
     width: 129px;
+}
+
+#input_text {
+    position: absolute;
+    top: 0;
+    right: 70px;
 }
 
 .subbutton {
@@ -60,11 +68,20 @@ a {
     padding-bottom: 3px;
 }
 
-.Lien_cnx {
+.Lien_cnx,
+.Lien_ins {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
+.Lien_upld {
+    width: 140px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Lien_upld:hover,
+.Lien_ins:hover,
 .Lien_cnx:hover,
 .subbutton:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #474747), color-stop(1, #dbdbdb));
@@ -75,6 +92,8 @@ a {
     background: linear-gradient(to bottom, #474747 5%, #dbdbdb 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#dbdbdb', GradientType=0);
     background-color: #474747;
+    color: white;
+    ;
 }
 
 .header {
@@ -144,10 +163,55 @@ textarea {
 }
 
 .errorMSG {
-    color: #723032;
-    text-shadow: 0 1px 1px bisque;
+    margin-top: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    background: #ffe754;
+    filter: contrast(120%);
+    width: 42%;
     font-size: 1.2em;
-    margin-bottom: 5px;
+    color: red;
+    font-style: bold;
+}
+
+.FormatMSG {
+    margin-top: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 1.5%;
+    background: #0688c7;
+    filter: contrast(120%);
+    width: 35%;
+    font-size: 1.2em;
+    color: white;
+}
+
+.upload_form {
+    margin-top: 2%;
+}
+
+.titref {
+    font-weight: bold;
+    margin-right: 1%;
+    font-size: 1.5em;
+}
+
+.file {
+    background: #fff343;
+    border-radius: 5px;
+}
+
+.titremed {
+    width: 30%;
+    border-radius: 5px;
+}
+
+.grostitre {
+    font-weight: bold;
+    font-size: 2.5em;
 }
 
 
@@ -157,7 +221,11 @@ textarea {
 
 
 /*Desktop*/
+
+
 /* 1280px*/
+
+
 /*@media screen and (min-width:80em) */
 
 @media screen and (min-width:1280px) {
@@ -262,6 +330,10 @@ textarea {
         margin-top: 0.5em;
         font-size: 1.5em;
     }
+    .Lien_ins {
+        float: left;
+        margin: 0;
+    }
     .lien_cnx,
     .subbutton {
         width: 144px;
@@ -293,7 +365,6 @@ textarea {
         width: 144px;
         border-radius: 7px;
         text-align: center;
-        
         font-size: 0.8em;
     }
     .logo1 {
@@ -301,5 +372,20 @@ textarea {
     }
     .logo2 {
         width: 17em;
+    }
+    .errorMSG {
+        margin-top: 5%;
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .FormatMSG {
+        width: 100%;
+    }
+    .titremed {
+        width: 100%;
+    }
+    .grostitre {
+        font-size: 1.5em;
+        font-style: bold;
     }
 }
