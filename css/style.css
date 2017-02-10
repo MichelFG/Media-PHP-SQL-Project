@@ -248,11 +248,10 @@ textarea {
     }
 }
 
-
 /* TABLETTES */
 /*762px*/
 /*@media screen and (min-width: 47em) and (max-width: 80em) */
-@media screen and (min-width: 760px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
     #conteneur {
         background-image: url("../img/tablettewpperf.png");
         background-repeat: no-repeat;
@@ -301,9 +300,7 @@ textarea {
 
 
 /* SMARTPHONE*/
-/*jusqu'à 762 */
-
-@media screen and (max-width: 760px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     body {
         margin-left: 2px;
         text-align: center;
@@ -328,7 +325,6 @@ textarea {
         margin: auto;
         
     }
-    
     
     
    /* #logo + .lien_cnx {
