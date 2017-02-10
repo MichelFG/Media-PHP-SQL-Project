@@ -8,6 +8,8 @@
 
     echo'<div class="Lien_upld"><a href="upload.php">Charger un fichier</a></div>';
 
+    Recherche::rechercheGen();
+
     echo '<div class="slide">';
     echo '</div>';
 
