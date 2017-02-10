@@ -75,9 +75,9 @@ class Session {
     }
     
     /* METHODES D AUTHENTIFICATION*/
-    public function isAuth($name) 
+    public static function isAuth($name) 
     {
-        if (isset($_SESSION[$name]) && $_SESSION[$name]!==NULL) {
+        if (isset($_SESSION[$name]) && $_SESSION[$name]!='') {
             return TRUE; 
         }  else  {
             return FALSE;
@@ -86,8 +86,8 @@ class Session {
     
     public static function disconnect($name) 
     {
-        if (isset($_SESSION[$name]) && $_SESSION[$name]!==NULL) {
-            unset($_SESSION[$name]);
+        if (isset($_SESSION[$name]) && $_SESSION[$name]!='') {
+            session_destroy($_SESSION[$name]);
             return TRUE;
         } 
     }
