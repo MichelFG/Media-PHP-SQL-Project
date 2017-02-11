@@ -1,4 +1,4 @@
-    body {
+body {
     background-image: url("../img/metal2.png");
 }
 
@@ -79,6 +79,11 @@ a {
     padding-top: 3px;
     padding-bottom: 3px;
 }
+
+.subbutton[value="Envoyer"] {
+    margin-bottom: 10px;
+}
+
 
 .Lien_cnx,
 .Lien_ins {
@@ -213,6 +218,15 @@ textarea {
     opacity: 0.75;
 }
 
+/* Passage en inline-block pour faciliter l'alignement       */
+.recherche label{
+    display: inline-block;
+    width: 75px;
+}
+
+
+
+
 .FormatMSG {
     margin-top: 2%;
     border: 1px solid black;
@@ -260,6 +274,11 @@ textarea {
     cursor: pointer;
 }
 
+.bx-wrapper .bx-viewport {
+
+    background-color: red;
+}
+
 
 /**************************************
 ********MEDIA QUERIES ***************
@@ -273,14 +292,13 @@ textarea {
 
 
 /*@media screen and (min-width:80em) */
-
 @media screen and (min-width:1280px) {
     #conteneur {
         background-image: url("../img/wpperf.png");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        /* background-size: contain;*/
+        background-size: contain;
         /* background-size: cover;*/
         width: 1280px;
         margin-left: auto;
@@ -294,10 +312,7 @@ textarea {
 
 
 /*762px*/
-
-
 /*@media screen and (min-width: 47em) and (max-width: 80em) */
-
 @media screen and (min-width: 768px) and (max-width: 1280px) {
     #conteneur {
         background-image: url("../img/tablettewpperf.png");
@@ -347,10 +362,7 @@ textarea {
 
 
 /* SMARTPHONE*/
-
-
 /*jusqu'à 762 */
-
 @media screen and (min-width: 320px) and (max-width: 768px) {
     body {
         margin-left: 2px;
@@ -386,7 +398,7 @@ textarea {
         font-size: 1.4em;
     }
     .lien_cnx,
-    .subbutton {
+    .subbutton, .Lien_cnx {
         width: 140px;
         margin: auto;
         margin-top: 0.5em;
@@ -408,6 +420,8 @@ textarea {
         padding-top: 2%;
         padding-bottom: 20%;
     }
+
+
     textarea {
         resize: inherit;
     }
@@ -450,3 +464,8 @@ textarea {
     .recherche {
         margin: 0;
     }
+
+    .FILE-BTN {
+        margin: auto;
+    }
+}
