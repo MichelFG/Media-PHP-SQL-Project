@@ -1,10 +1,10 @@
 <?php
-     require_once 'class/autoload.php';
+	 require_once 'class/autoload.php';
      $data = Session::getInstance();
-     $data->pseudo = 'Ainsley';
+     //$session->pseudo = 'Ainsley';
      MakeHTML::html_start("Page d'accueil");
 	 $cnx=base::connect();
-     printf( '<div>My name is %s</div>' , $data->pseudo );
+     //printf( '<div>My name is %s</div>' , $data->pseudo );
 	 
      Recherche::rechercheGen();
 
@@ -29,7 +29,7 @@
 		 while($result=$requete->fetch(PDO::FETCH_OBJ))
 			{
 				 $id=explode('.',$result->nom_du_fichier);
-				 echo '<div><img class="sli" id="'.$id[0].'" src="media/music.png"><span>'.$result->description.'</span></div>';
+				 echo '<div><img class="sli" id="'.$id[0].'" src="media/music.png" alt="'.$id[0].'"><span>'.$result->description.'</span></div>';
 			}
 		 
 		 echo '</div>';
@@ -41,30 +41,25 @@
 		 while($result=$requete->fetch(PDO::FETCH_OBJ))
 			{
 				 $id=explode('.',$result->nom_du_fichier);
-				 echo '<div><img class="sli" id="'.$id[0].'" src="media/'.$result->nom_du_fichier.'" style="cursor: pointer;"><span>'.$result->description.'</span></div>';
+				 echo '<div><img class="sli" id="'.$id[0].'" src="media/'.$result->nom_du_fichier.'" alt="'.$id[0].'"><span>'.$result->description.'</span></div>';
 			}
 		 
 		 echo '</div>';
      echo '</div>';
 	 
-	 echo '<p><a href="#overlay3">Afficher le masque</a></p>';
-
-	 
 	 // Popup Overlay
 	 echo '<div id="overlay3">';
-	 echo '<div class="popup_block">';
-	 echo '<a class="close" href="#noWhere"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="img/close_pop.png"></a>';
-	 echo '<img style="float: right; margin: 0 0 0 20px;" alt="Lil bomb dude" src="bomber.gif">';
-	 echo '<h2>Popup</h2>';
-	 echo '<p>Aliquip transverbero loquor esse ille vulputate exerci veniam fatua eros similis illum valde. Praesent, venio conventio rusticus antehabeo lenis. Melior pertineo feugait, praesent hos rusticus et haero facilisis abluo. </p>';
-	 echo '<p>Veniam tincidunt augue abluo vero, augue nisl melior quidem secundum nobis singularis eum eum.</p>';
-	 echo '</div>';
+	 echo '		<div class="popup_block">';
+	 echo '			<a class="close" href="#noWhere"><img alt="Fermer" id="btn_close" title="Fermer la fenêtre" class="btn_close" src="img/close_pop.png"></a>';
+	 echo '			<div id="cont_popup">';
+	 echo '			</div>';
+	 echo '		</div>';
 	 echo '</div>';
 	 // Fin popup Overlay
 	 
-	 echo '<script src="jquery-2.1.4.min.js"></Script>
-		   <script src="jquery.bxslider/jquery.fitvids.js"></Script>
-		   <script src="jquery.bxslider/jquery.bxslider.min.js"></Script>
+	 echo '<script src="jquery-2.1.4.min.js"></script>
+		   <script src="jquery.bxslider/jquery.fitvids.js"></script>
+		   <script src="jquery.bxslider/jquery.bxslider.min.js"></script>
 		   <script>
 		   $(".films").bxSlider({
 				  minSlides: 1,
@@ -85,10 +80,36 @@
 				  slideMargin: 0
 				});
 			 $("img.sli").click(function(){
+				 document.location.href="#overlay3";
 				 var id=$(this).attr("id");
-				 alert("On a clique sur "+id); 
+				 //console.log("On a clique sur "+id); 
+				 
+				 // Routine Ajax pour récup les données de la balise à mettre en place (video, audio, img etc ...)
+				 
+					 $.ajax({
+						 url: "media.php?media="+id,
+						 type: "GET",
+						 dataType: "html",
+						 success: function(code_html,statut){ 
+							 $("#cont_popup").html(code_html);
+						 },
+						 
+						 error: function(resultat, statut,erreur){ 
+							 $("cont_popup").html(resultat+statut+erreur);
+						 },
+						 complete: function(resultat,statut){ 
+							 $("cont_popup").html(resultat+statut);
+						 }				 
+					 });
 			 });
-		 </script>';
-	 
+				 $("#btn_close").click(function()
+										{
+											 if(document.getElementById("myaudio"))
+												 {
+													 player=document.getElementById("myaudio");
+													 player.pause();
+												 }
+										});
+			</script>';
 	 
      MakeHTML::html_end();
