@@ -1,4 +1,4 @@
-    body {
+body {
     background-image: url("../img/metal2.png");
 }
 
@@ -56,7 +56,7 @@ a {
     background: -o-linear-gradient(top, #dbdbdb 5%, #474747 100%);
     background: -ms-linear-gradient(top, #dbdbdb 5%, #474747 100%);
     background: linear-gradient(to bottom, #dbdbdb 5%, #474747 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#474747', GradientType=0);
+   /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', endColorstr='#474747', GradientType=0);*/
     background-color: #dbdbdb;
     -moz-border-radius: 9px;
     -webkit-border-radius: 9px;
@@ -79,6 +79,11 @@ a {
     padding-top: 3px;
     padding-bottom: 3px;
 }
+
+.subbutton[value="Envoyer"] {
+    margin-bottom: 10px;
+}
+
 
 .Lien_cnx,
 .Lien_ins {
@@ -106,10 +111,9 @@ a {
     background: -o-linear-gradient(top, #474747 5%, #dbdbdb 100%);
     background: -ms-linear-gradient(top, #474747 5%, #dbdbdb 100%);
     background: linear-gradient(to bottom, #474747 5%, #dbdbdb 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#dbdbdb', GradientType=0);
-    background-color: #474747;
+   /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#dbdbdb', GradientType=0);
+    */background-color: #474747;
     color: white;
-    ;
 }
 
 .header {
@@ -119,7 +123,7 @@ a {
     min-height: 8em;
     height: auto;
     margin: auto;
-    margin-top 5em;
+    margin-top: 5em;
     background-image: url("../img/metal.png");
     background-size: contain;
     background-position: center;
@@ -194,7 +198,7 @@ textarea {
     width: 42%;
     font-size: 1.2em;
     color: red;
-    font-style: bold;
+    font-weight: bold;
 }
 
 .recherche {
@@ -212,6 +216,15 @@ textarea {
     color: white;
     opacity: 0.75;
 }
+
+/* Passage en inline-block pour faciliter l'alignement */
+.recherche label{
+    display: inline-block;
+    width: 75px;
+}
+
+
+
 
 .FormatMSG {
     margin-top: 2%;
@@ -261,6 +274,8 @@ textarea {
 }
 
 
+
+
 /**************************************
 ********MEDIA QUERIES ***************
 ***********************************/
@@ -280,7 +295,7 @@ textarea {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        /* background-size: contain;*/
+        background-size: contain;
         /* background-size: cover;*/
         width: 1280px;
         margin-left: auto;
@@ -291,19 +306,14 @@ textarea {
 
 
 /* TABLETTES */
-
-
 /*762px*/
-
-
 /*@media screen and (min-width: 47em) and (max-width: 80em) */
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
     #conteneur {
         background-image: url("../img/tablettewpperf.png");
         background-repeat: no-repeat;
-        /*pb de postionnement avec fixed*/
-        /*background-attachment: fixed;*/
+        background-attachment: fixed;
         background-position: center;
         background-size: cover;
         width: 90%;
@@ -347,8 +357,6 @@ textarea {
 
 
 /* SMARTPHONE*/
-
-
 /*jusqu'à 762 */
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -386,7 +394,7 @@ textarea {
         font-size: 1.4em;
     }
     .lien_cnx,
-    .subbutton {
+    .subbutton, .Lien_cnx {
         width: 140px;
         margin: auto;
         margin-top: 0.5em;
@@ -408,6 +416,8 @@ textarea {
         padding-top: 2%;
         padding-bottom: 20%;
     }
+
+
     textarea {
         resize: inherit;
     }
@@ -437,7 +447,7 @@ textarea {
     }
     .grostitre {
         font-size: 1.5em;
-        font-style: bold;
+        font-weight: bold;
     }
     .recherche {
         width: 100%;
@@ -450,3 +460,8 @@ textarea {
     .recherche {
         margin: 0;
     }
+
+    .FILE-BTN {
+        margin: auto;
+    }
+}
