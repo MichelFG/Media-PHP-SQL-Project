@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		 <meta charset="utf-8">
+		 <title>Exemple slick</title>
+		 <style>
+			.vz-wrapper {
+			  position: relative;
+			  width: 400px;
+			  height: 360px;
+			  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#396362), to(#000000));
+			  background: -webkit-radial-gradient(circle, #7DA7A6, #000000);
+			  background: -moz-radial-gradient(circle, #7DA7A6, #000000);
+			  background: -ms-radial-gradient(circle, #7DA7A6, #000000);
+			  box-shadow: inset 0 0 160px 0 #000;
+			  cursor: pointer;
+			}
+
+			.vz-wrapper.-canvas {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  height: initial;
+			  width: initial;
+			  background: transparent;
+			  box-shadow: none;
+			}
+
+			@media screen and (min-width: 420px) {
+			.vz-wrapper { box-shadow: inset 0 0 200px 60px #000; }
+			}		 
+		 </style>
+	 </head>
+	 <body>
+		 <div class="vz-wrapper">
+		  <audio id="myAudio" src="media/6.ogg" data-author="TriStan" data-title="Musique1"></audio>
+			 <div class="vz-wrapper -canvas">
+				 <canvas id="myCanvas" width="400" height="360"></canvas>
+			 </div>
+		 </div>
+		 <script src="visualizer.js"></script>
+	 </body>
+</html>
